@@ -1,5 +1,4 @@
 <?php
-//get_all_products.php
  
 /*
  * Following code will list all the products
@@ -8,14 +7,14 @@
 // array for JSON response
 $response = array();
  
-if (isset($_POST['kind'])) {
+if (isset($_GET['kind'])) {
 	// include db connect class
 	require_once __DIR__ . '/db_connect.php';
 	 
 	// connecting to db
 	$db = new DB_CONNECT();
 	 
-	$query = "SELECT * FROM boardtable1_univer where kind=".$_POST['kind']";";
+	$query = "SELECT * FROM boardtable1_univer where kind='".$_POST['kind']."';";
 	// get all products from products table
 	$result = mysql_query($query) or die(mysql_error());
 	 
