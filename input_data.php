@@ -41,6 +41,7 @@ if (isset($_POST['jsonMyStoriesInfo'])) {
         $response["utftest"] = $inputArray[1]['username'];
         $response["name"] = $username;
         $response["all"] = $inputArray;
+        $response["korea"] = "한글 테스트";
 
         // echoing JSON response
         echo json_encode($response);
