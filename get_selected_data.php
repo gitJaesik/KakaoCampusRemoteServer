@@ -7,7 +7,7 @@
 // array for JSON response
 $response = array();
  
-if (isset($_GET['kind'])) {
+if (isset($_POST['kind'])) {
 	// include db connect class
 	require_once __DIR__ . '/db_connect.php';
 	 
