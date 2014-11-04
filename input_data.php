@@ -25,12 +25,17 @@ if (isset($_POST['jsonMyStoriesInfo'])) {
 
 	for($i = 1; $i <= sizeof($inputArray); $i++){
 		$username = cleanMe($inputArray[$i]['username']);
-		$usercontents = cleanMe($inputArray[$i]['usercontents']);
+		$usercontents = $inputArray[$i]['usercontents'];
 		$kind = cleanMe($inputArray[$i]['kind']);
+		$kslink = $inputArray[$i]['kslink'];
 
     	$result = 
+			mysql_query("INSERT INTO boardtable1_univer(username, usercontents, kind, kslink) 
+					VALUES('$username', '$usercontents', '$kind', '$kslink')");
+			/*
 			mysql_query("INSERT INTO boardtable1_univer(username, usercontents, kind) 
 					VALUES('$username', '$usercontents', '$kind')");
+					*/
 
 	}
     // check if row inserted or not
