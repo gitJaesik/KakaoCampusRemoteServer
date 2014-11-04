@@ -31,6 +31,7 @@ if (isset($_POST['kind'])) {
 			$product["id"] = $row["id"];
 			$product["username"] = $row["username"];
 			$product["usercontents"] = $row["usercontents"];
+			$product["kslink"] = $row["kslink"];
 			$product["created_at"] = $row["created_at"];
 			//$product["updated_at"] = $row["updated_at"];
 	 
