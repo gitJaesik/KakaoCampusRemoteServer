@@ -9,6 +9,7 @@ header('Content-Type: text/html; charset=utf-8');
 // array for JSON response
 $response = array();
 
+// jsonMyStoriesInfo라는 POST값이 있으면 입력을 진행
 if (isset($_POST['jsonMyStoriesInfo'])) {
 
 	$inputArray = array();
@@ -32,10 +33,6 @@ if (isset($_POST['jsonMyStoriesInfo'])) {
     	$result = 
 			mysql_query("INSERT INTO boardtable1_univer(username, usercontents, kind, kslink) 
 					VALUES('$username', '$usercontents', '$kind', '$kslink')");
-			/*
-			mysql_query("INSERT INTO boardtable1_univer(username, usercontents, kind) 
-					VALUES('$username', '$usercontents', '$kind')");
-					*/
 
 	}
     // check if row inserted or not
